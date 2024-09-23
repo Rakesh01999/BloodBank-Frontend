@@ -45,7 +45,7 @@ const Login = () => {
                 // navigate after login
                 // toast.success('Successfully Logged in');
                 navigate(location?.state ? location.state : '/')
-                        
+
 
             })
             .catch(error => {
@@ -187,6 +187,14 @@ const Login = () => {
             </Helmet>
             {/* <h3 className='text-3xl text-center font-bold'>Login Page</h3> */}
 
+            {/* --------- for spacing----- */}
+            <div className='mb-36'>
+                <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                    <div>
+                        {/* <FaAnglesRight /> */}
+                    </div>
+                </div>
+            </div>
 
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">

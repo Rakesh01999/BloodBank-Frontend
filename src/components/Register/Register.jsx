@@ -81,7 +81,17 @@ const Register = () => {
             <Helmet>
                 <title>Register</title>
             </Helmet>
+
             <div className="hero-content flex-col">
+                {/* --------- for spacing----- */}
+                <div className='mb-28'>
+                    <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                        <div>
+                            {/* <FaAnglesRight /> */}
+                        </div>
+                    </div>
+                </div>
+
                 <div className="text-center ">
                     <div className="text-3xl md:text-5xl font-bold text-blue-500 my-3">
                         <h1 class="animate__animated animate__fadeInDown">Register now!</h1>
@@ -116,7 +126,7 @@ const Register = () => {
                                 <input type={showPassword ? "text" : "password"} name="password" required placeholder="Password" className="input input-bordered" />
                                 <span className="absolute  bottom-11 right-2" onClick={() => setShowPassword(!showPassword)}>
                                     {
-                                        showPassword ? <FaEye className="text-2xl"></FaEye> : <FaEyeSlash className="text-2xl"></FaEyeSlash> 
+                                        showPassword ? <FaEye className="text-2xl"></FaEye> : <FaEyeSlash className="text-2xl"></FaEyeSlash>
                                     }
                                 </span>
                                 <label className="label">
