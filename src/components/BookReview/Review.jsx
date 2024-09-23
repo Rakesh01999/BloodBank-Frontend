@@ -5,6 +5,7 @@ import { GiFeather } from 'react-icons/gi';
 const Review = ({ review }) => {
     return (
         <div>
+            
             <div data-aos="fade-right" className="bg-cyan-200 shadow-md rounded-lg p-6">
                 {/* <FaBook className="text-4xl text-blue-500 mb-4 mx-auto" /> */}
                 <h2 className="text-xl font-bold font-serif italic mb-2 flex items-center gap-3"> <FaBookReader className='text-3xl' />

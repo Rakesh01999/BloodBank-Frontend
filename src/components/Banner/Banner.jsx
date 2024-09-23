@@ -13,6 +13,14 @@ const Banner = () => {
 
     return (
         <div>
+            {/* --------- for spacing----- */}
+            <div className='mb-44'>
+                <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                    <div>
+                        {/* <FaAnglesRight /> */}
+                    </div>
+                </div>
+            </div>
             <div className='hero max-w-[370px]  md:max-w-[540px] lg:max-w-[1540px] mx-auto  rounded-3xl  mb-10 bg-no-repeat' style={{ backgroundImage: 'url(https://i.postimg.cc/5077FVWM/rafael-m-CTNHIGI2-Wc-U-unsplash.jpg)' }}>
 
                 <div className='hero-overlay bg-opacity-70 rounded-3xl flex flex-col md:flex-row items-center lg:p-32 md:px-8 px-4 py-8 md:py-2'>
@@ -21,7 +29,10 @@ const Banner = () => {
                         {/* <div className='text-xl md:text-3xl lg:text-3xl font-bold'> */}
                         <div className='text-[40px] md:text-4xl font-serif italic text-blue-400 lg:text-6xl font-bold'>
                             <h1 class="animate__animated animate__fadeInLeft">
-                                Find Exclusive Range of Books At Our <span className='text-cyan-300'>Book Buddy</span> 
+                                Find Your Desired Blood At Our
+                                <span className='text-red-300'>
+                                    Blood Bank
+                                </span>
                             </h1>
                         </div>
                         <div className='text-[20px] md:text-xl lg:text-2xl text-white font-bold'>

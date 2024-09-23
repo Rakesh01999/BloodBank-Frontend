@@ -7,7 +7,7 @@ import axios from 'axios';
 const AddBook = () => {
 
     const { user } = useContext(AuthContext);
-    
+
     const url = `https://library-server-blue.vercel.app/book?email=${user?.email}`;
 
     const handleAddBook = event => {
@@ -38,8 +38,8 @@ const AddBook = () => {
 
 
 
-            //  ------------- Test 
-            axios.post(url, newBook, { withCredentials: true })
+        //  ------------- Test 
+        axios.post(url, newBook, { withCredentials: true })
             .then(res => {
                 if (res.data.insertedId) {
                     Swal.fire({
@@ -64,6 +64,14 @@ const AddBook = () => {
             <Helmet>
                 <title>Book Buddy | Add Book</title>
             </Helmet>
+            {/* --------- for spacing----- */}
+            <div className='mb-44'>
+                <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                    <div>
+                        {/* <FaAnglesRight /> */}
+                    </div>
+                </div>
+            </div>
             <h2 className="text-2xl text-center text-blue-500 font-bold my-3">Add Book</h2>
             <div className="bg-[#F4F3F0] p-4 md:p-8 lg:p-24">
                 <h2 className="text-3xl font-extrabold mb-4 text-center">Add Book</h2>

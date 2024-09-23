@@ -11,7 +11,7 @@ const MyList = () => {
     const slBorrowedBook = useLoaderData();
     // console.log(slBorrowedBook);
 
-    
+
     // Filter borrowedBook based on user email
     const userBorrowedBook = slBorrowedBook.filter((borrowedBook) => borrowedBook.email === user.email);
     const [borrowedBooks, setBorrowedBooks] = useState(userBorrowedBook);
@@ -45,7 +45,7 @@ const MyList = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                
+
             })
         // console.log('clicked return ');
 
@@ -92,6 +92,14 @@ const MyList = () => {
             <Helmet>
                 <title>Book Buddy | Borrowed Books</title>
             </Helmet>
+            {/* --------- for spacing----- */}
+            <div className='mb-44'>
+                <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                    <div>
+                        {/* <FaAnglesRight /> */}
+                    </div>
+                </div>
+            </div>
             <h2 className="text-xl md:text-3xl text-center text-blue-600 font-bold my-3">Borrowed Books</h2>
             <div className='max-w-[370px] md:max-w-[540px] lg:max-w-[1540px] mx-auto px-4 md:px-8 py-8 md:py-12  rounded-3xl flex flex-col md:flex-row items-center mb-10'>
                 <div className="mx-auto grid grid-cols-1 gap-4">

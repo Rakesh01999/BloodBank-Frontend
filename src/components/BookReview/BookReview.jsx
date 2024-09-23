@@ -5,12 +5,13 @@ import Review from './Review';
 import AuthProvider, { AuthContext } from '../../Providers/AuthProvider';
 
 const BookReview = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     console.log(user);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         // fetch('https://library-server-blue.vercel.app/category')
-        fetch('http://localhost:5000/review')
+        // fetch('http://localhost:5000/review')
+        fetch('https://library-server-blue.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
@@ -32,8 +33,8 @@ const BookReview = () => {
         // send data to the server
 
         // fetch('https://library-server-blue.vercel.app/category', {
-        // fetch('https://library-server-blue.vercel.app/review', {
-        fetch('http://localhost:5000/review', {
+        // fetch('http://localhost:5000/review', {
+        fetch('https://library-server-blue.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -60,12 +61,20 @@ const BookReview = () => {
             <Helmet>
                 <title>Book Buddy | Book Review </title>
             </Helmet>
+            {/* --------- for spacing----- */}
+            <div className='mb-44'>
+                <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                    <div>
+                        {/* <FaAnglesRight /> */}
+                    </div>
+                </div>
+            </div>
             <h2 className="text-2xl md:text-4xl my-3 font-bold text-center text-blue-600">Book Review </h2>
 
             {/* ------ */}
             <div className="bg-blue-300 p-4 md:p-8 lg:p-24">
-               {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> */}
-               <div className="flex flex-col mx-auto gap-10">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> */}
+                <div className="flex flex-col mx-auto gap-10">
                     {
                         reviews.map(review => <Review key={review._id} review={review}></Review>)
                     }

@@ -11,7 +11,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 // import BookTable from '../BookTable/BookTable'; // Import the BookTable component
 
 const AllBook = () => {
-    const {user, email} = useContext(AuthContext);
+    const { user, email } = useContext(AuthContext);
     // const books = useLoaderData();
 
     const url = `https://library-server-blue.vercel.app/book?email=${user?.email}`;
@@ -52,6 +52,14 @@ const AllBook = () => {
             <Helmet>
                 <title>Book Buddy | All Books (Card View)</title>
             </Helmet>
+            {/* --------- for spacing----- */}
+            <div className='mb-44'>
+                <div className='text-[] md:text-3xl md:font-bold text-center text-blue-600 mb-4 flex flex-row items-center justify-center gap-2'>
+                    <div>
+                        {/* <FaAnglesRight /> */}
+                    </div>
+                </div>
+            </div>
             <h2 className="text-2xl text-center text-blue-500 font-bold my-3">All Books</h2>
             {/* Dropdown for filter */}
             <div className='text-center'>
