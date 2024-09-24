@@ -60,7 +60,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to="/" className="flex items-center">
-                    <img className="w-20 h-12 md:w-40 md:h-24 m-4" src={logo} alt="Logo" />
+                    <img className="w-20 h-12 md:w-48 md:h-24 m-4" src={logo} alt="Logo" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -71,7 +71,7 @@ const Header = () => {
             <div className="navbar-end flex gap-4">
                 {user ? (
                     <>
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-col md:flex-row items-center gap-2">
                             <p className="text-sm md:text-base">{user.displayName}</p>
                             <div className="tooltip" data-tip={user.displayName}>
                                 <img className="w-10 h-10 md:w-14 md:h-14 border-2 border-blue-600 rounded-full" src={user.photoURL} alt="User Profile" />
